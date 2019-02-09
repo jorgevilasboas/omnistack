@@ -6,7 +6,7 @@ import api from '../services/api';
 
 export default class Tweet extends Component {
     handleLike = async () => {
-        const { _id } = this.props;
+        const { _id } = this.props.tweet;
         await api.post(`likes/${_id}`);
 
     }
